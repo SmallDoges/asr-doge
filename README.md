@@ -191,15 +191,10 @@ asr-doge/
 │   ├── benchmark/
 │   │   ├── __init__.py
 │   │   └── benchmark.py          # Comprehensive benchmark script
-│   ├── models/
-│   │   ├── __init__.py
-│   │   ├── configuration_singer_doge.py
-│   │   └── modeling_singer_doge.py
-│   └── modules/
-│       ├── conv.py
-│       ├── conv_norm.py
-│       ├── ltsm.py
-│       └── nae.py                # Neural Audio Encoder (SEANet)
+│   ├── models/                   # ⚠️ LEGACY - See note below
+│   │   └── ...
+│   └── modules/                  # ⚠️ LEGACY - See note below
+│       └── ...
 ├── scripts/
 │   ├── download_librispeech.py   # Dataset download script
 │   └── reproduce.sh              # Full reproduction script
@@ -208,6 +203,14 @@ asr-doge/
 └── examples/
     └── inference.py              # Example inference script
 ```
+
+> ⚠️ **Note on Legacy Directories**
+> 
+> The following directories contain **experimental/legacy code** from early research explorations and should be **ignored**:
+> - `src/models/` - Early Doge model experiments (configuration_singer_doge.py, modeling_singer_doge.py)
+> - `src/modules/` - Neural audio encoder experiments (SEANet, conv modules, LSTM variants)
+> 
+> These are kept for historical reference but are **NOT used** in the main ASR-Doge implementation. The actual model architecture is defined in `src/training/train.py` which uses pre-trained models from HuggingFace (Granite Speech + SmallDoge).
 
 ## 🔧 Configuration
 
