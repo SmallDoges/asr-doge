@@ -1,4 +1,4 @@
-# 🐕 ASR-Doge: Parameter-Efficient Speech Recognition with SmallDoge
+# ASR-Doge: Parameter-Efficient Speech Recognition with SmallDoge
 
 <p align="center">
   <img src="https://img.shields.io/badge/WER-4.70%25-brightgreen" alt="WER">
